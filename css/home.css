@@ -55,16 +55,18 @@ body{
     top: 16px;
     right: 48px;
 }
+
 .main{
     width: 940px;
-    height: 700px;
-    margin: 20px auto;
+    height: 522px;
+    margin: 0 auto;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
 }
 .left{
     width:720px;
-    height: 700px;
+    height: 522px;
     background-color: white;
     display: inline-block;
     box-shadow: 9px 2px 9px -6px #d5d5d5;
@@ -111,7 +113,7 @@ body{
 }
 li{
     list-style: none;
-    width: 150px;
+    width: 181px;
     height: 50px;
     background-color: #aecff3;
     border-radius: 6px;
