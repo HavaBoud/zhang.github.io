@@ -4,7 +4,7 @@ body{
 }
 .header{
     width: 100%;
-    height: 201px;
+    height: var(--h);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,6 @@ body{
     width: 940px;
     height: 120px;
     position: relative;
-    /* background-color: darkorange; */
 }
 .header-center>h1{
     color: white;
@@ -55,10 +54,12 @@ body{
     top: 16px;
     right: 48px;
 }
-
+:root{
+    --h:201px;
+}
 .main{
     width: 940px;
-    height: 522px;
+    height: calc(100vh - var(--h));
     margin: 0 auto;
     margin-top: 20px;
     display: flex;
