@@ -5,10 +5,10 @@ body{
 .top{
     width: 100%;
     height: 201px;
-    background-color:#2e7bcf;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #2e7bcf url(../img/header-bg.img) 0 0 repeat-x;
 }
 .top-center{
     width: 940px;
@@ -58,7 +58,6 @@ body{
 .main{
     width: 940px;
     height: 700px;
-    /* background-color: #aed3fa; */
     margin: 30px auto;
     display: flex;
     justify-content: center;
@@ -76,6 +75,11 @@ body{
     font-size: 15px;
     color: #666;
     width: 661px;
+    word-break:break-all;
+    display: -webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
 }
 .title-1{
     margin-top: 35px;
@@ -112,4 +116,7 @@ li{
     background-color: #aecff3;
     border-radius: 6px;
     margin-bottom: 20px;
+}
+.title2-text{
+    text-indent: 2em;
 }
