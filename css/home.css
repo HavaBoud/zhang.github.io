@@ -58,7 +58,7 @@ body{
 .main{
     width: 940px;
     height: 700px;
-    margin: 30px auto;
+    margin: 20px auto;
     display: flex;
     justify-content: center;
 }
@@ -81,23 +81,23 @@ body{
     -webkit-box-orient:vertical;
     overflow:hidden;
 }
-.title-1{
+.topic-1{
     margin-top: 35px;
     margin-bottom: 0;
     font-weight: normal;
     color: #474747;
 }
-.title-1::before{
+.topic-1::before{
     color: #9ddcff;
     content: "/";
     margin-left: -38px;
     padding-right: 20px;
 }
-.title-2{
+.topic-2{
     color: #474747;
     font-weight: normal;
 }
-.title-2::before{
+.topic-2::before{
     color: #9ddcff;
     content: "//";
     margin-left: -51px;
@@ -117,6 +117,9 @@ li{
     border-radius: 6px;
     margin-bottom: 20px;
 }
-.title2-text{
+.topic2-text{
+    text-indent: 2em;
+}
+.topic1-text{
     text-indent: 2em;
 }
