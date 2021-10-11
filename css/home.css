@@ -1,0 +1,115 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.top{
+    width: 100%;
+    height: 201px;
+    background-color:#2e7bcf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top-center{
+    width: 940px;
+    height: 120px;
+    position: relative;
+    /* background-color: darkorange; */
+}
+.top-center>h1{
+    color: white;
+    font-size: 70px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: normal;
+    line-height: 1;
+}
+.top-center>h2{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 26px;
+    font-weight: normal;
+    line-height: 1.3;
+    color: #9ddcff;
+}
+.top-center>div{
+    position:absolute;
+    top: 0;
+    right: 0;
+    width: 202px;
+    height: 80px;
+    background: url(../img/top-center-img.png);
+
+}
+.top-center-t{
+    font-size: 12px;
+    color: white;
+    position: absolute;
+    top: 11px;
+    right: 35px;
+}
+.top-center-text{
+    color: white;
+    font-size: 23px;
+    position: absolute;
+    top: 16px;
+    right: 48px;
+}
+.main{
+    width: 940px;
+    height: 700px;
+    /* background-color: #aed3fa; */
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+}
+.left{
+    width:720px;
+    height: 700px;
+    background-color: white;
+    display: inline-block;
+    box-shadow: 9px 2px 9px -6px #d5d5d5;
+    z-index: 1;
+}
+.left>p{
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: #666;
+    width: 661px;
+}
+.title-1{
+    margin-top: 35px;
+    margin-bottom: 0;
+    font-weight: normal;
+    color: #474747;
+}
+.title-1::before{
+    color: #9ddcff;
+    content: "/";
+    margin-left: -38px;
+    padding-right: 20px;
+}
+.title-2{
+    color: #474747;
+    font-weight: normal;
+}
+.title-2::before{
+    color: #9ddcff;
+    content: "//";
+    margin-left: -51px;
+    padding-right: 20px;
+}
+.right{
+    width: 220px;
+    display: inline-block;
+    /* background-color: #a5caf1; */
+    height: 364px;
+}
+li{
+    list-style: none;
+    width: 150px;
+    height: 50px;
+    background-color: #aecff3;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
