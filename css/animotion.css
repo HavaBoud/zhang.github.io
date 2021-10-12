@@ -22,6 +22,7 @@ body,header,main,footer{
     font-size: 20px;
     background-color: black;
     background-image: linear-gradient(to bottom right,  #243949,#517fa4 );
+    cursor: pointer;
 }
 .top-img{
     width: 40px;
@@ -30,11 +31,14 @@ body,header,main,footer{
     position: relative;
     top: 10px;
     left: 50px;
-    animation-name: fadein;
+}
+.imgani{
+    /* animation-name: fadein;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-duration: 5s;
-    animation-direction: alternate;
+    animation-direction: alternate; */
+    animation:fadein 3s;
 }
 @keyframes fadein{
     0%{opacity: 0;}
@@ -52,6 +56,8 @@ body,header,main,footer{
     overflow: hidden;
     border-right: 1px solid;
     text-shadow: 5px 5px 5px #ffffff;
+}
+.top-textani{
     animation: w 4s steps(10) forwards,
                 text 0.3s steps(1) infinite;
 }
@@ -66,5 +72,124 @@ body,header,main,footer{
     width: 20px;
     height: 20px;
     border-radius: 10px;
-    
+    background-color: #91aabe;
+    position: relative;
+    display: inline-block;
+}
+.warp{
+    display: inline-block;
+    position:relative;
+}
+.warpani{
+    animation:marble 3s;
+
+}
+/* .marbleani{
+    animation-name: marble;
+    animation-duration:5s;
+    animation-direction:alternate-reverse;
+    animation-iteration-count:infinite;
+} */
+@keyframes marble{
+    from{left: 0;}
+    to{left: 1445px;}
+}
+.box{
+    position: relative;
+    width:200px;
+    height: 200px;
+    margin: 190px auto;
+}
+.boxain{
+    /* animation-duration:5s;
+    animation-name: spin;
+    animation-iteration-count:1; */
+    animation:spin 3s;
+
+}
+@keyframes spin{
+    from{transform: rotate(360deg);}
+    to{transform: rotate(0deg);}
+}
+p{
+    margin: 0;
+}
+.box>p:nth-child(1){
+    position: absolute;
+    width:100px;
+    height: 100px;
+    background-color: #ede3e7;
+    border-radius: 0px 100px 0 100px;
+}
+.top-l-ani{
+    /* animation-name: topl; */
+    /* animation-duration:5s; */
+    /* animation-iteration-count:1; */
+    animation:topl 3s;
+}
+@keyframes topl{
+    0%{top: 0;left: 0px;}
+    50%{top: -215px;left: -215px;}
+    100%{top: 0px;left: 0px;}
+}
+.box>p:nth-child(2){
+    position: absolute;
+    width:100px;
+    height: 100px;
+    left: 100px;
+    background-color: #ede3e7;
+    border-radius: 100px 0px 100px 0px;
+}
+.top-r-ani{
+    /* animation-name: topr;
+    animation-duration:5s;
+    animation-iteration-count:1; */
+    animation:topr 3s;
+
+}
+@keyframes topr{
+    0%{top: 0;left: 0px;}
+    50%{top: -215px;left: 215px;}
+    100%{top: 0px;left: 100px;}
+}
+.box>p:nth-child(3){
+    position: absolute;
+    width:100px;
+    height: 100px;
+    top:100px;
+    background-color: #ede3e7;
+    border-radius: 100px 0px 100px 0px;
+}
+.bottom-l-ani{
+    /* animation-name: bottoml;
+    animation-duration:5s;
+    animation-iteration-count:1; */
+    animation:bottoml 3s;
+
+}
+@keyframes bottoml{
+    0%{top: 0;left: 0px;}
+    50%{top: 345px;left: -215px;}
+    100%{top: 100px;left: 0px;}
+}
+.box>p:nth-child(4){
+    position: absolute;
+    width:100px;
+    height: 100px;
+    left: 100px;
+    top: 100px;
+    background-color: #ede3e7;
+    border-radius: 0px 100px 0 100px;
+}
+.bottom-r-ani{
+    /* animation-name: bottomr;
+    animation-duration:5s;
+    animation-iteration-count:1; */
+    animation:bottomr 3s;
+
+}
+@keyframes bottomr{
+    0%{top: 0;left: 0px;}
+    50%{top: 345px;left: 215px;}
+    100%{top: 100px;left: 100px;}
 }

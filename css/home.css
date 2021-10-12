@@ -93,8 +93,7 @@ body{
 .topic-1::before{
     color: #9ddcff;
     content: "/";
-    margin-left: -38px;
-    padding-right: 20px;
+    padding-right: 10px;
 }
 .topic-2{
     color: #474747;
@@ -103,13 +102,11 @@ body{
 .topic-2::before{
     color: #9ddcff;
     content: "//";
-    margin-left: -51px;
-    padding-right: 20px;
+    padding-right: 10px;
 }
 .right{
     width: 220px;
     display: inline-block;
-    /* background-color: #a5caf1; */
     height: 364px;
 }
 li{
