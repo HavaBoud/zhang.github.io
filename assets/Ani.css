@@ -1,0 +1,15 @@
+.change{
+    animation: w 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes w{
+    to{left: 0px;}
+}
+.opicity{
+    animation: show 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes show{
+    from{opacity: 0;}
+    to{opacity: 1;left: 0px;}
+}

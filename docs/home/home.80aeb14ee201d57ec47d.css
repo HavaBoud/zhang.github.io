@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  width: 100%;
+  height: var(--h);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2e7bcf url(../ea715f544dbad477c244.img) 0 0 repeat-x;
+}
+.header-center {
+  width: 940px;
+  height: 120px;
+  position: relative;
+}
+.header-center > h1 {
+  color: white;
+  font-size: 70px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: normal;
+  line-height: 1;
+}
+.header-center > h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 26px;
+  font-weight: normal;
+  line-height: 1.3;
+  color: #9ddcff;
+}
+.header-center > div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 202px;
+  height: 80px;
+  background: url(data:image/png;base64,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);
+}
+.header-center-t {
+  font-size: 12px;
+  color: white;
+  position: absolute;
+  top: 11px;
+  right: 35px;
+}
+.header-center-text {
+  color: white;
+  font-size: 23px;
+  position: absolute;
+  top: 16px;
+  right: 48px;
+}
+:root {
+  --h: 201px;
+}
+.main {
+  width: 940px;
+  height: calc(100vh - var(--h));
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.left {
+  width: 720px;
+  height: 522px;
+  background-color: white;
+  display: inline-block;
+  box-shadow: 9px 2px 9px -6px #d5d5d5;
+  z-index: 1;
+}
+.left > p {
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: #666;
+  width: 661px;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.topic {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #474747;
+  text-indent: 0px;
+  cursor: pointer;
+}
+.right {
+  width: 220px;
+  display: inline-block;
+  height: 364px;
+}
+li {
+  list-style: none;
+  width: 181px;
+  height: 50px;
+  background-color: #aecff3;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+.topic-text {
+  text-indent: 2em;
+  width: 660px;
+  margin-bottom: 0px;
+  font-size: 15px;
+  color: #666;
+  width: 658px;
+}
+.box {
+  position: relative;
+}
+.box {
+  position: relative;
+}
+.box {
+  position: relative;
+}
+a {
+  cursor: pointer;
+  color: #1c1cdf;
+  font-size: 15px;
+}
+#show {
+  display: block;
+}
+#hidden {
+  display: none;
+}
+

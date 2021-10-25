@@ -118,7 +118,7 @@ p{
     position: absolute;
     width:100px;
     height: 100px;
-    background-color: #ede3e7;
+    background-color: #e9d7df;
     border-radius: 0px 100px 0 100px;
 }
 .top-l-ani{
@@ -137,7 +137,7 @@ p{
     width:100px;
     height: 100px;
     left: 100px;
-    background-color: #ede3e7;
+    background-color: #e9d7df;
     border-radius: 100px 0px 100px 0px;
 }
 .top-r-ani{
@@ -148,7 +148,7 @@ p{
 
 }
 @keyframes topr{
-    0%{top: 0;left: 0px;}
+    0%{top: 0;left: 100px;}
     50%{top: -215px;left: 215px;}
     100%{top: 0px;left: 100px;}
 }
@@ -157,7 +157,7 @@ p{
     width:100px;
     height: 100px;
     top:100px;
-    background-color: #ede3e7;
+    background-color: #e9d7df;
     border-radius: 100px 0px 100px 0px;
 }
 .bottom-l-ani{
@@ -168,7 +168,7 @@ p{
 
 }
 @keyframes bottoml{
-    0%{top: 0;left: 0px;}
+    0%{top: 100;left: 0px;}
     50%{top: 345px;left: -215px;}
     100%{top: 100px;left: 0px;}
 }
@@ -178,7 +178,7 @@ p{
     height: 100px;
     left: 100px;
     top: 100px;
-    background-color: #ede3e7;
+    background-color: #e9d7df;
     border-radius: 0px 100px 0 100px;
 }
 .bottom-r-ani{
@@ -189,7 +189,7 @@ p{
 
 }
 @keyframes bottomr{
-    0%{top: 0;left: 0px;}
+    0%{top: 100;left: 100px;}
     50%{top: 345px;left: 215px;}
     100%{top: 100px;left: 100px;}
 }

@@ -1,103 +1,111 @@
-
 // class Ani{
-//     constructor(){
-        
+//     constructor(item){
+//         this.targets=item.targets
+//         this.animation(this.targets)
+//     }
+//     animation(arr){
+//         if(!arr.length) return;
+//         var newarr =arr.shift();
+//         newarr.el.classList.add(newarr.animationClassName)
+//         newarr.el.addEventListener('animationend',()=>{
+//             newarr.el.classList.remove(newarr.animationClassName)
+//             this.animation(arr);
+//         })
 //     }
 // }
-// var ani = new Ani({
-//     targets:[
-//         {
-//             el:document.querySelector('.top-img'),
-//             animationClassName:'imgani'
-//         },
-//         {
-//             el:document.querySelector('.top-text'),
-//             animationClassName:'top-textani'
-//         },
-//         {
-//             el:document.querySelector('.marbles'),
-//             animationClassName:'marbleani'
-//         },
-//         {
-//             el:document.querySelector('.box'),
-//             animationClassName:'boxani'
-//         },
-//         {
-//             el:document.querySelector('.top-l'),
-//             animationClassName:'.top-l-ani'
-//         },
-//         {
-//             el:document.querySelector('.top-r'),
-//             animationClassName:'.top-r-ani'
-//         },
-//         {
-//             el:document.querySelector('.bottom-l'),
-//             animationClassName:'.bottom-l-ani'
-//         },
-//         {
-//             el:document.querySelector('.bottom-r'),
-//             animationClassName:'.bottom-r-ani'
-//         }
-//     ]
-// })
+class Ani {
+    constructor(e) {
+        this.targets = e.targets;
+        this.count = e.count;
+        this.newArr = this.targets.slice();
+        this.exec(this.newArr);
+    }
+    exec(arr) {
+        let _this = this;
+        if (arr.length > 0) {
+            let target = arr.shift();
+            target.el.classList.add(target.animationClassName);
+            // onlick是覆盖 addEventListener是添加事件
+            let addEvent = function(e) {
+                this.classList.remove(target.animationClassName);
+                this.removeEventListener('animationend', addEvent)
+                _this.exec(arr);
+            }
+            target.el.addEventListener('animationend', addEvent);
+        } else {
+            this.newArr = this.targets.slice();
+            if (this.count > 1) {
+                this.count--;
+                this.exec(this.newArr);
+            }
+        }
+    }
+}
+
+var ani = new Ani({
+    targets:[
+        {
+            el:document.querySelector('.top-img'),
+            animationClassName:'imgani'
+        },
+        {
+            el:document.querySelector('.top-text'),
+            animationClassName:'top-textani'
+        },
+        {
+            el:document.querySelector('.warp'),
+            animationClassName:'warpani'
+        },
+        {
+            el:document.querySelector('.box'),
+            animationClassName:'boxain'
+        }],
+        count :2
+
+        
+}
+)
 // var topimg=document.querySelector('.top-img');
 // var toptext = document.querySelector('.top-text')
 // var marbles = document.querySelector('.marbles')
 // var box = document.querySelector('.box')
-// var topl = document.querySelector('.top-l')
-// var topr = document.querySelector('top-r')
-// var bottoml = document.querySelector('bottom-l')
-// var bottomr = document.querySelector('bottom-r')
 // topimg.classList.add('imgani')
 // toptext.classList.add('top-textani')
 // marbles.classList.add('marbleani')
 // box.classList.add('boxani')
-// topl.classList.add('top-l-ani')
-// topr.classList.add('top-r-ani')
-// bottoml.classList.add('bottom-l-ani')
-// bottomr.classList.add('bottom-r-ani')
-var arr=[
-    {
-        el:document.querySelector('.top-img'),
-        animationClassName:'imgani'
-    },
-    {
-        el:document.querySelector('.top-text'),
-        animationClassName:'top-textani'
-    },
-    {
-        el:document.querySelector('.warp'),
-        animationClassName:'warpani'
-    },
-    {
-        el:document.querySelector('.box'),
-        animationClassName:'boxain'
-    },
-    // {
-    //     el:document.querySelector('.top-l'),
-    //     animationClassName:'top-l-ani'
-    // },
-    // {
-    //     el:document.querySelector('.top-r'),
-    //     animationClassName:'top-r-ani'
-    // },
-    // {
-    //     el:document.querySelector('.bottom-l'),
-    //     animationClassName:'bottom-l-ani'
-    // },
-    // {
-    //     el:document.querySelector('.bottom-r'),
-    //     animationClassName:'bottom-r-ani'
-    // }
-]
-function showAnimation(){
-    if(!arr.length) return;
-    console.log(arr)
-    let target = arr.shift();
-    target.el.classList.add(target.animationClassName)
-    target.el.addEventListener('animationend',function(e){
-        console.log('动画执行结束')
-        showAnimation()
-    })
-}
-showAnimation()
+// var arr=[
+//     {
+//         el:document.querySelector('.top-img'),
+//         animationClassName:'imgani'
+//     },
+//     {
+//         el:document.querySelector('.top-text'),
+//         animationClassName:'top-textani'
+//     },
+//     {
+//         el:document.querySelector('.warp'),
+//         animationClassName:'warpani'
+//     },
+//     {
+//         el:document.querySelector('.box'),
+//         animationClassName:'boxain'
+//     },
+// ]
+// // var arr=arr.slice()
+// // console.log(arr)
+// function showAnimation(){
+//     if(!arr.length) return;
+//     var target = arr.shift();
+//     console.log(arr)
+//     target.el.classList.add(target.animationClassName)
+//     target.el.addEventListener('animationend',function(e){
+//         console.log('动画执行结束')
+//         showAnimation()
+//     })
+//     // if(!arr.length){
+//     //     arr.reverse();
+//     //     console.log(arr)
+//     // }
+//     // return
+// }
+// showAnimation()
