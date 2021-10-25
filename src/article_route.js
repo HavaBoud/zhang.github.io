@@ -1,6 +1,6 @@
 import firstArticle from '../src/article/1.html'
 import secondArticle from '../src/article/2.html'
-// import thirdArticle from '../src/article/3.html'
+import thirdArticle from '../src/article/3.html'
 
 function HTMLparse(str) {
     var oDiv = document.createElement('div');
@@ -16,10 +16,10 @@ export default[
         id:2,
         article:HTMLparse(secondArticle)
     },
-    // {
-    //     id:3,
-    //     article:HTMLparse(thirdArticle)
-    // },
+    {
+        id:3,
+        article:HTMLparse(thirdArticle)
+    },
 ]
 // {
 //     id:4,

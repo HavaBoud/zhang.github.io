@@ -62,14 +62,10 @@ let ellipsis = new Ellipsis({
 })
 ellipsis.exec();
 
-document.querySelector('h3').onclick=function(){
-    window.location.href='./articleDetails.html?id='+this.dataset.id
-    //获取元素中自定义属性为data-()的值
-    //如果括号中写id  那么就是this.dataset.id
-    //如果括号中写abc 那么就算是this.dataset.abc
-    // console.log(this.getAttribute('data-id'))
-    // console.log(this.dataset.id) 
-}
-
+document.querySelectorAll('.topic').forEach(element => {
+    element.onclick = function() {
+        window.location.href = './articleDetails.html?id=' + this.dataset.id;
+    }
+})
 
 

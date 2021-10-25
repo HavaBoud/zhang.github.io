@@ -1,0 +1,58 @@
+<template>
+    <h3 class="topic" data-id="3">周记</h3>
+    <article>
+        ### 第二周 周结
+        10.18 知识点 ：
+
+        cloneNode克隆元素
+        获取到元素中自定义属性为data-()的值
+        如果括号中 写id 那么就是this.dataset.id 如果括号中写abc 那么就是this.dataset.abc
+
+        10.19
+        解耦：写方法的时候要考虑方法的复用性 一个方法只做一件事
+        入参：在方法的入参中 必传参数放前面 非必传参数可以靠后放
+        数据中id： 通常用来和服务端交互
+        DOM.remove() 只是在页面中没有 但是变量还是存在的
+        页面性能优化：文档碎片可以减少重绘和回流提高html性能
+        回调地域：
+        Promise 构造函数有两个变量 resolve 用于返回异步执行成功的函数 reject 用于返回异步执行失败的函数
+        async await这两个单词必须同时出现 使用的时候只是感觉变成同步 实际上还是异步 但是提高了代码的可读性
+
+        10.20
+        在需要判断的时候可以用三元表达式 前提是在一种情况下 非是即否 并且是非是即否的情况下用
+        导入的分类 一种叫同步导入 一种叫异步导入 按需加载
+
+        10.21
+        正则 是用来匹配字符串 有些特殊字符串 是无法匹配的
+        特殊字符 \ /() [] {} \n + *
+        () 代表分组 + 表示一个或多个 * 0个或多个
+        \S 反斜杠加大写字母代表非
+
+        10.22
+        正则补充
+        . 匹配回车以外的任何字符
+        test()检查元素是否符合正则表达式的规则 如果符合true否则false
+        match方法是匹配所有符合正则表达式的语句 把匹配的值放到数组
+
+        用来获取到()里的值
+        第一种：
+        reg.replace(reg,function(item,$1,$2){
+        console.log(item)
+        console.log($1)
+        console.log($2)
+        })
+        第二种:
+        reg.replace(reg,function(item){
+        console.log (RegExp.$1)
+        console.log (RegExp.$2)
+        })
+        先行断言 /根据前面匹配后面 匹配到了输出前面
+        hello(?=world) 'hello world' 可以匹配hello 但是不包含world
+        hello(?=world) 'hello abc' 什么也匹配不到
+        判断hello 后面跟的是world 如果不是那么匹配不成功
+        后行断言 /根据后面匹配前面 匹配到了输出后面
+        (?=hello)world 判断world前面不是hello 如果是那返回world 
+        
+        #### 在写根据#号判断h标签的时候 通过之前的写功能 我可以自己有逻辑 从要出的效果逐步往前推 从结果推需要实现的步骤 在通过正则来获取需要的文本或者标签 通过#号长度来判断 h标签的大小 最后把结果返回 
+        </article>
+</template>

@@ -1,5 +1,5 @@
 import arti from '../../src/article_route'
-
+import Markdown from '../../assets/Markdown'
 
 class Url {
     constructor(props) {
@@ -38,14 +38,14 @@ var url2 = new Url(params)
 var parse = url2.parse() //  type=2&id=1&name=xiaoming
 console.log(parse)
 
-
 document.querySelector('.artcle').innerHTML = getarticle()
 
 function getarticle() {
-    var data = ''
+    var data = '';
     for (let i = 0; i < arti.length; i++) {
         if (id == arti[i].id) {
-            data = arti[i].article
+            let md=new Markdown(arti[i].article)
+            data = md.parse()
             break
         }
     }
