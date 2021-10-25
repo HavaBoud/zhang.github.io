@@ -3,7 +3,7 @@ import articles from "../article_route.js"
 var warp = document.querySelector('.left')
 var ODiv = warp.querySelector('.box')
 ODiv.remove()
-articles.reverse()
+// articles.reverse()
 for (let i = 0; i < 1; i++) {
     var cloneNode = ODiv.cloneNode(true);
     cloneNode.querySelector('.topic-text').innerHTML=articles[i].article;
