@@ -2,18 +2,18 @@ import articles from "../article_route.js"
 
 var warp = document.querySelector('.left')
 var ODiv = warp.querySelector('.box')
-ODiv.remove();
-
-articles.forEach(article => {
+ODiv.remove()
+articles.reverse()
+for (let i = 0; i < 1; i++) {
     var cloneNode = ODiv.cloneNode(true);
-    cloneNode.querySelector('.topic-text').innerHTML=article.article;
+    cloneNode.querySelector('.topic-text').innerHTML=articles[i].article;
     warp.appendChild(cloneNode)
-})
+}
 
 class Ellipsis{ 
     constructor(props){
         this.el = props.el;
-        this.text = this.el.innerHTML;    
+        this.text = this.el.innerText;    
         this.textCount = props.textCount;
         this.findAllButtonText = props.findAllButtonText || '查看全文';
         this.ellipsisButtonText = props.ellipsisButtonText || '收起';
@@ -43,8 +43,6 @@ class Ellipsis{
         var _this = this;
         a.addEventListener('click',function(){
             _this.flag = !_this.flag;
-            // true = !true //false;
-            // false = !false //true;
             this.textContent = _this.buttonText;
             _this.el.childNodes[0].textContent = _this.flag ? _this.format(_this.text,_this.textCount): _this.text;
         })
@@ -54,18 +52,36 @@ class Ellipsis{
         return str.length < num ?  str : (str.substring(0,num) + '...');
     }
 }
-let ellipsis = new Ellipsis({
-    el:document.querySelectorAll('.topic-text')[0],
-    textCount:30,
-    findAllButtonText:"查看",
-    showFindAllButton:true
+function showhidden(){
+    var article=document.querySelectorAll('article')
+    article.forEach(item=>{
+        let ellipsis = new Ellipsis({
+            el:item,
+            textCount:100,
+            findAllButtonText:"查看",
+            showFindAllButton:true
+        })
+        ellipsis.exec();
+    })
+}
+showhidden();
+
+var moreBtn = document.querySelector('.more');
+moreBtn.addEventListener('click',function(){
+    var box =document.querySelectorAll('.box')
+    if (box.length>=articles.length) {
+        this.remove()
+    }
+    for (let i = box.length; i < box.length+1; i++) {
+        var cloneNode = ODiv.cloneNode(true);
+        cloneNode.querySelector('.topic-text').innerHTML=articles[i].article;
+        warp.appendChild(cloneNode)
+    }
+    showhidden();
 })
-ellipsis.exec();
 
 document.querySelectorAll('.topic').forEach(element => {
     element.onclick = function() {
         window.location.href = './articleDetails.html?id=' + this.dataset.id;
     }
 })
-
-
